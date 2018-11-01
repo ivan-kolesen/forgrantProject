@@ -1,1 +1,1 @@
-const scss = require('../style.scss');
+import scss from '../style.scss';

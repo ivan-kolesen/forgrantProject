@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/index.js!./style.scss":
-/*!**********************************************!*\
-  !*** ./node_modules/css-loader!./style.scss ***!
-  \**********************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./style.scss":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./style.scss ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -98,7 +98,7 @@ exports = module.exports = __webpack_require__(/*! ./node_modules/css-loader/lib
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #000;\n}", ""]);
+exports.push([module.i, "body {\n  background-color: #000; }\n", ""]);
 
 // exports
 
@@ -705,10 +705,14 @@ module.exports = function (css) {
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-const scss = __webpack_require__(/*! ../style.scss */ "./style.scss");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style.scss */ "./style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_0__);
+
 
 /***/ }),
 
@@ -720,7 +724,7 @@ const scss = __webpack_require__(/*! ../style.scss */ "./style.scss");
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !./node_modules/css-loader!./style.scss */ "./node_modules/css-loader/index.js!./style.scss");
+var content = __webpack_require__(/*! !./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./style.scss */ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./style.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
