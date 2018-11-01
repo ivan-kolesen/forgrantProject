@@ -1,3 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
+
+$color-background: #1b232b;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
-  background-color: #000;
+  background: {
+    color: $color-background;
+    position: center top;
+    repeat: no-repeat;
+  }
+}
+
+h2{
+  font-size: 32px;
+  color: rgb(255, 255, 255);
+  line-height: 1.875;
+  font-weight: 500;
+}
+
+.wrapper {
+  max-width: 984px;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  background: {
+    color: $color-background;
+    image: url("./img/background_pattern.png");
+    position: center top;
+    repeat: no-repeat;
+  }
+}
+
+header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+  background-color: rgba(253, 253, 253, 0.02);
+  border: rgba(148, 232, 254, 0.1) solid 1px;
+  border-radius: 10px;
+
+  .headline{
+    width: 66.6666%;
+    display: flex;
+    justify-content: center;
+    padding: 18px 0;
+  }
+
+  .options{
+    width: 33.3333%;
+    display: flex;
+    align-items: center;
+
+    .list{
+      position: relative;
+      width: 90%;
+      margin-left: 2.5%;
+      background-color: transparent;
+      border: 1px solid rgb(146, 232, 254);
+      border-radius: 5px;
+      font-size: 16px;
+      color: rgb(255, 255, 255);
+      padding: 16px 1px 16px 14px;
+      font-weight: 300;
+    }
+
+    .list::after{
+      position: absolute;
+      top: 21px;
+      right: 12px;
+      width: 5px;
+      height: 5px;
+      transform: rotate(45deg);
+      border-bottom: 1px solid rgb(146, 232, 254);
+      border-right: 1px solid rgb(146, 232, 254);
+      content: '';
+    }
+  }
+
 }
