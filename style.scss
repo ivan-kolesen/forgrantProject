@@ -18,16 +18,24 @@ body {
   }
 }
 
-h2{
+h2 {
   font-size: 32px;
   color: rgb(255, 255, 255);
   line-height: 1.875;
   font-weight: 500;
 }
 
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+}
+
+
+
 .wrapper {
   max-width: 984px;
-  height: 500px;
   margin: auto;
   overflow: hidden;
   background: {
@@ -38,28 +46,28 @@ h2{
   }
 }
 
-header{
+header {
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-top: 70px;
+  margin: 70px 0 52px;
   background-color: rgba(253, 253, 253, 0.02);
   border: rgba(148, 232, 254, 0.1) solid 1px;
   border-radius: 10px;
 
-  .headline{
+  .headline {
     width: 66.6666%;
     display: flex;
     justify-content: center;
     padding: 18px 0;
   }
 
-  .options{
+  .options {
     width: 33.3333%;
     display: flex;
     align-items: center;
 
-    .list{
+    .list {
       position: relative;
       width: 90%;
       margin-left: 2.5%;
@@ -72,7 +80,7 @@ header{
       font-weight: 300;
     }
 
-    .list::after{
+    .list::after {
       position: absolute;
       top: 21px;
       right: 12px;
@@ -84,5 +92,64 @@ header{
       content: '';
     }
   }
+}
 
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .etherium {
+    background-color: #155d2e;
+  }
+
+  .litecoin {
+    background-color: #333333;
+  }
+
+  .bitcoin {
+    background-color: #301103;
+  }
+
+  section {
+    display: flex;
+    width: 31.3%;
+    height: 350px;
+    background: radial-gradient(circle farthest-side at 60% 30%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .linear-grad {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(340deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0.2) 65%, rgba(255, 255, 255, 0));
+  }
+
+  .section__name {
+    height: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .section__img {
+    height: 36%;
+    background-image: url("./img/ethereum.png");
+    background-position: 30px 53%;
+  }
+
+  .section__data{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 8px 30px 0 35px;
+  }
+
+  .section__data__price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
