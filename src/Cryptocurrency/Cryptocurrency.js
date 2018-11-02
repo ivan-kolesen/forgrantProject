@@ -59,10 +59,10 @@ class Cryptocurrency {
 
     if (timeIntervalChange >= 0) {
       timeIntervalChange = `+${timeIntervalChange} ${this.measure}`;
-      document.querySelector(id).classList.add("changes-value_positive");
+      document.querySelector(id).classList.add("changes-row__value_positive");
     } else {
       timeIntervalChange = `${timeIntervalChange} ${this.measure}`;
-      document.querySelector(id).classList.add("changes-value_negative");
+      document.querySelector(id).classList.add("changes-row__value_negative");
     }
 
     document.querySelector(

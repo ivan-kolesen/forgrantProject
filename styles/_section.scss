@@ -67,27 +67,22 @@ section {
   }
 }
 
-.section__data {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 30px;
-}
-
-.section__data_price {
+.section__price {
   height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 0 30px;
 }
 
-.section__data_toggle {
+.section__toggle {
   height: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 0 30px;
 
   .toggle-text {
     font-size: 14px;
@@ -95,20 +90,20 @@ section {
   }
 }
 
-.section__data__changes {
+.section__changes {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 10px 30px;
 }
 
-.section__data_change {
+.changes-row {
   height: 23px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  .changes-text {
+  .changes-row__name {
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -116,18 +111,18 @@ section {
     font-weight: 700;
   }
 
-  .changes-value {
+  .changes-row__value {
     display: flex;
     align-items: center;
     font-size: 16px;
     font-weight: 700;
   }
 
-  .changes-value_positive {
+  .changes-row__value_positive {
     color: greenyellow;
   }
 
-  .changes-value_negative {
+  .changes-row__value_negative {
     color: red;
   }
 }

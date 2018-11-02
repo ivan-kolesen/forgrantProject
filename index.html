@@ -7,10 +7,10 @@
 <body>
 <div class="wrapper">
   <header>
-    <div class="headline">
+    <div class="header__headline">
       <h2>Select currency to exhange:</h2>
     </div>
-    <div class="options">
+    <div class="header__options">
       <div class="list">
         <div id="currentCurrency" class="list__value">USD</div>
         <div class="list__items">
@@ -30,38 +30,33 @@
         <div class="section__img">
           <img src="./img/ethereum.png">
         </div>
-        <div class="section__data">
-          <div class="section__data_price">
-            <h3>Price:</h3>
-            <h3 id="priceETH"></h3>
-          </div>
+        <div class="section__price">
+          <h3>Price:</h3>
+          <h3 id="priceETH"></h3>
         </div>
-        <div class="section__data">
-          <div class="section__data_toggle">
+        <div class="section__toggle">
             <div class="toggle-text">Percent change</div>
-            <div id="toggle" class="toggle-switcher">
-              <div class="toggle-switcher_back-layer"></div>
-              <div class="toggle-switcher_front-layer"></div>
-              <div></div>
+            <div id="toggle" class="toggle-button">
+              <div class="toggle-button__back-layer"></div>
+              <div class="toggle-button__front-layer"></div>
             </div>
           </div>
-        </div>
-        <div class="section__data__changes">
-          <div class="section__data_change">
-            <div class="changes-text">Hour change</div>
-            <div class="changes-value" id="hourChangeETH"></div>
+        <div class="section__changes">
+          <div class="changes-row">
+            <div class="changes-row__name">Hour change</div>
+            <div class="changes-row__value" id="hourChangeETH"></div>
           </div>
-          <div class="section__data_change">
-            <div class="changes-text">Day change</div>
-            <div class="changes-value" id="dayChangeETH"></div>
+          <div class="changes-row">
+            <div class="changes-row__name">Day change</div>
+            <div class="changes-row__value" id="dayChangeETH"></div>
           </div>
-          <div class="section__data_change">
-            <div class="changes-text">Week change</div>
-            <div class="changes-value" id="weekChangeETH"></div>
+          <div class="changes-row">
+            <div class="changes-row__name">Week change</div>
+            <div class="changes-row__value" id="weekChangeETH"></div>
           </div>
-          <div class="section__data_change">
-            <div class="changes-text">Month change</div>
-            <div class="changes-value" id="monthChangeETH"></div>
+          <div class="changes-row">
+            <div class="changes-row__name">Month change</div>
+            <div class="changes-row__value" id="monthChangeETH"></div>
           </div>
         </div>
       </div>

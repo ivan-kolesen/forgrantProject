@@ -31,11 +31,11 @@ class Select {
 
     document.querySelector("#toggle").addEventListener("click", () => {
       document
-        .querySelector(".toggle-switcher_back-layer")
-        .classList.toggle("toggle-switcher_back-layer_off");
+        .querySelector(".toggle-button__back-layer")
+        .classList.toggle("toggle-button__back-layer_off");
       document
-        .querySelector(".toggle-switcher_front-layer")
-        .classList.toggle("toggle-switcher_front-layer_off");
+        .querySelector(".toggle-button__front-layer")
+        .classList.toggle("toggle-button__front-layer_off");
       this.ethereum.switchToggle();
     });
   }

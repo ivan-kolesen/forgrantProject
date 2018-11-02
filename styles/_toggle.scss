@@ -3,14 +3,14 @@ $color-background-back-layer-off: #c4c4c4;
 $color-background-front-layer: #c9c9c9;
 $color-border-front-layer: #fff;
 
-.toggle-switcher {
+.toggle-button {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.toggle-switcher_back-layer {
+.toggle-button__back-layer {
   width: 35px;
   height: 15px;
   border-radius: 10px;
@@ -18,11 +18,11 @@ $color-border-front-layer: #fff;
   box-shadow: inset -2px 4px 15px -5px #000;
 }
 
-.toggle-switcher_back-layer_off {
+.toggle-button__back-layer_off {
   background-color: $color-background-back-layer-off;
 }
 
-.toggle-switcher_front-layer {
+.toggle-button__front-layer {
   position: absolute;
   left: 0;
   width: 20px;
@@ -32,7 +32,7 @@ $color-border-front-layer: #fff;
   border-radius: 50%;
 }
 
-.toggle-switcher_front-layer_off {
+.toggle-button__front-layer_off {
   right: 0;
   left: unset;
 }
