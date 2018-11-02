@@ -1,13 +1,15 @@
 class Cryptocurrency {
   constructor(name) {
+    this.currentCurrency;
     this.name = name;
     this.toggle = 'percent';
     this.measure = '%';
     this.data = {};
   }
 
-  setData() {
-    fetch('https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD')
+  setData(currentCurrency) {
+    this.currentCurrency = currentCurrency;
+    fetch(`https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC${this.currentCurrency}`)
       .then(results => {
         return results.json();
       })
@@ -15,6 +17,32 @@ class Cryptocurrency {
         this.data = data;
         this.render();
       });
+  }
+
+  setMeasure() {
+    if(this.toggle === 'percent') {
+      this.measure = '%';
+    } else {
+      switch (this.currentCurrency) {
+        case 'USD':
+          this.measure = '$';
+          break;
+        case 'EUR':
+          this.measure = 'E';
+          break;
+        case 'RUB':
+          this.measure = 'P';
+          break;
+        case 'GBP':
+          this.measure = 'F';
+          break;
+      }
+    }
+  }
+
+  switchToggle() {
+    this.toggle = (this.toggle === 'percent' ? 'price' : 'percent');
+    this.render();
   }
 
   renderPrice() {
@@ -37,6 +65,7 @@ class Cryptocurrency {
   }
 
   render() {
+    this.setMeasure();
     this.renderPrice();
     this.renderTimeIntervalChange('hour');
     this.renderTimeIntervalChange('day');

@@ -24,10 +24,16 @@ class Select{
       document.querySelector('#currentCurrency').innerText = this.currentCurrency;
       this.render();
     });
+
+    document.querySelector('#toggle').addEventListener('click', () => {
+      document.querySelector('.toggle-switcher_back-layer').classList.toggle('toggle-switcher_back-layer_off');
+      document.querySelector('.toggle-switcher_front-layer').classList.toggle('toggle-switcher_front-layer_off');
+      this.ethereum.switchToggle();
+    });
   }
 
   render(){
-    this.ethereum.setData();
+    this.ethereum.setData(this.currentCurrency);
     //this.litecoin.render();
     //this.bitcoin.render();
   }

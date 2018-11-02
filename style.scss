@@ -2,12 +2,14 @@
 
 $color-background: #1b232b;
 
+
 * {
   margin: 0;
   padding: 0;
   font-size: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  color: #FFF;
 }
 
 body {
@@ -20,7 +22,6 @@ body {
 
 h2 {
   font-size: 32px;
-  color: rgb(255, 255, 255);
   line-height: 1.875;
   font-weight: 500;
 }
@@ -29,7 +30,6 @@ h3 {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: rgb(255, 255, 255);
 }
 
 .wrapper {
@@ -89,7 +89,6 @@ header {
 
     .list__value{
       font-size: 16px;
-      color: rgb(255, 255, 255);
       font-weight: 100;
       padding: 3px 16px;
     }
@@ -126,9 +125,10 @@ main {
 
   section {
     display: flex;
-    width: 31.3%;
-    height: 350px;
+    width: 308px;
     background: radial-gradient(circle farthest-side at 60% 30%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   .linear-grad {
@@ -140,48 +140,106 @@ main {
   }
 
   .section__name {
-    height: 17%;
+    height: 58px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    margin: 0 30px;
+    z-index: 1;
   }
 
   .section__img {
-    height: 36%;
-    background-image: url("./img/ethereum.png");
-    background-position: 30px 53%;
+    height: 118px;
+    position: relative;
+
+    img{
+      position: absolute;
+      top: -57px;
+      left: 22px;
+    }
   }
 
   .section__data{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    justify-content: flex-start;
-    margin: 8px 30px 0 35px;
+    justify-content: center;
+    margin: 0 30px;
   }
 
   .section__data_price{
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
-  .section__data_changes{
+  .section__data_toggle{
+    height: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .toggle-text{
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .toggle-switcher{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .toggle-switcher_back-layer{
+        width: 35px;
+        height: 15px;
+        border-radius: 10px;
+        background-color: #3eb3ef;
+        box-shadow: inset -2px 4px 15px -5px #000;
+      }
+
+      .toggle-switcher_back-layer_off{
+        background-color: #c4c4c4;
+      }
+
+      .toggle-switcher_front-layer{
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #c9c9c9;
+        border: 2px solid #fff;
+        border-radius: 10px;
+      }
+
+      .toggle-switcher_front-layer_off{
+        right: 0;
+        left: unset;
+      }
+    }
+  }
+
+  .section__data__changes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section__data_change{
+    height: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
     .changes-text{
       font-size: 14px;
-      font-family: "Roboto";
       color: rgba(255, 255, 255, 0.2);
       font-weight: 700;
     }
 
     .changes-value{
       font-size: 16px;
-      font-family: "Roboto";
       font-weight: 700;
     }
 
