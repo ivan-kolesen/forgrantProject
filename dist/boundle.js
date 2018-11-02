@@ -118,10 +118,10 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATAAAADmCAYAAABS
 var escape = __webpack_require__(/*! ./node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ./node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:300,500,700);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,500,700);", ""]);
 
 // module
-exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  font-size: 0;\n  box-sizing: border-box;\n  font-family: \"Roboto\", sans-serif; }\n\nbody {\n  background-color: #1b232b;\n  background-position: center top;\n  background-repeat: no-repeat; }\n\nh2 {\n  font-size: 32px;\n  color: white;\n  line-height: 1.875;\n  font-weight: 500; }\n\nh3 {\n  font-size: 20px;\n  font-weight: 500;\n  letter-spacing: 1px;\n  color: white; }\n\n.wrapper {\n  max-width: 984px;\n  margin: auto;\n  overflow: hidden;\n  background-color: #1b232b;\n  background-image: url(" + escape(__webpack_require__(/*! ./img/background_pattern.png */ "./img/background_pattern.png")) + ");\n  background-position: center top;\n  background-repeat: no-repeat; }\n\nheader {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  margin: 70px 0 52px;\n  background-color: rgba(253, 253, 253, 0.02);\n  border: rgba(148, 232, 254, 0.1) solid 1px;\n  border-radius: 10px; }\n  header .headline {\n    width: 66.6666%;\n    display: flex;\n    justify-content: center;\n    padding: 18px 0; }\n  header .options {\n    width: 33.3333%;\n    display: flex;\n    align-items: center; }\n    header .options .list {\n      position: relative;\n      width: 90%;\n      margin-left: 2.5%;\n      background-color: transparent;\n      border: 1px solid #92e8fe;\n      border-radius: 5px;\n      font-size: 16px;\n      color: white;\n      padding: 16px 1px 16px 14px;\n      font-weight: 300; }\n    header .options .list::after {\n      position: absolute;\n      top: 21px;\n      right: 12px;\n      width: 5px;\n      height: 5px;\n      transform: rotate(45deg);\n      border-bottom: 1px solid #92e8fe;\n      border-right: 1px solid #92e8fe;\n      content: ''; }\n\nmain {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  main .etherium {\n    background-color: #155d2e; }\n  main .litecoin {\n    background-color: #333333; }\n  main .bitcoin {\n    background-color: #301103; }\n  main section {\n    display: flex;\n    width: 31.3%;\n    height: 350px;\n    background: radial-gradient(circle farthest-side at 60% 30%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 100%); }\n  main .linear-grad {\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n    height: 100%;\n    background: linear-gradient(340deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0.2) 65%, rgba(255, 255, 255, 0)); }\n  main .section__name {\n    height: 17%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding-top: 10px; }\n  main .section__img {\n    height: 36%;\n    background-image: url(" + escape(__webpack_require__(/*! ./img/ethereum.png */ "./img/ethereum.png")) + ");\n    background-position: 30px 53%; }\n  main .section__data {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    margin: 8px 30px 0 35px; }\n  main .section__data__price {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between; }\n", ""]);
+exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  font-size: 0;\n  box-sizing: border-box;\n  font-family: \"Roboto\", sans-serif; }\n\nbody {\n  background-color: #1b232b;\n  background-position: center top;\n  background-repeat: no-repeat; }\n\nh2 {\n  font-size: 32px;\n  color: white;\n  line-height: 1.875;\n  font-weight: 500; }\n\nh3 {\n  font-size: 20px;\n  font-weight: 500;\n  letter-spacing: 1px;\n  color: white; }\n\n.wrapper {\n  max-width: 984px;\n  margin: auto;\n  overflow: hidden;\n  background-color: #1b232b;\n  background-image: url(" + escape(__webpack_require__(/*! ./img/background_pattern.png */ "./img/background_pattern.png")) + ");\n  background-position: center top;\n  background-repeat: no-repeat; }\n\nheader {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  margin: 70px 0 52px;\n  background-color: rgba(253, 253, 253, 0.02);\n  border: rgba(148, 232, 254, 0.1) solid 1px;\n  border-radius: 10px; }\n  header .headline {\n    width: 66.6666%;\n    display: flex;\n    justify-content: center;\n    padding: 18px 0; }\n  header .options {\n    width: 33.3333%;\n    display: flex;\n    align-items: center; }\n    header .options .list {\n      position: relative;\n      width: 90%;\n      margin-left: 2.5%;\n      background-color: transparent;\n      border: 1px solid #92e8fe;\n      border-radius: 5px;\n      padding: 10px 0; }\n    header .options .list::after {\n      position: absolute;\n      top: 21px;\n      right: 12px;\n      width: 5px;\n      height: 5px;\n      transform: rotate(45deg);\n      border-bottom: 1px solid #92e8fe;\n      border-right: 1px solid #92e8fe;\n      content: ''; }\n    header .options .list__value {\n      font-size: 16px;\n      color: white;\n      font-weight: 100;\n      padding: 3px 16px; }\n    header .options .list__items {\n      display: none;\n      position: absolute;\n      top: 120%;\n      width: 100%;\n      background-color: #1b232b;\n      border: 1px solid #92e8fe;\n      border-radius: 5px;\n      padding: 10px 0; }\n\nmain {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  main .etherium {\n    background-color: #155d2e; }\n  main .litecoin {\n    background-color: #333333; }\n  main .bitcoin {\n    background-color: #301103; }\n  main section {\n    display: flex;\n    width: 31.3%;\n    height: 350px;\n    background: radial-gradient(circle farthest-side at 60% 30%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 100%); }\n  main .linear-grad {\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n    height: 100%;\n    background: linear-gradient(340deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0.2) 65%, rgba(255, 255, 255, 0)); }\n  main .section__name {\n    height: 17%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding-top: 10px; }\n  main .section__img {\n    height: 36%;\n    background-image: url(" + escape(__webpack_require__(/*! ./img/ethereum.png */ "./img/ethereum.png")) + ");\n    background-position: 30px 53%; }\n  main .section__data {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    margin: 8px 30px 0 35px; }\n  main .section__data__price {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between; }\n", ""]);
 
 // exports
 
@@ -751,6 +751,41 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ "./src/Select/Select.js":
+/*!******************************!*\
+  !*** ./src/Select/Select.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+class Select{
+  constructor(){
+    this.currentCurrency = document.querySelector('#currentCurrency').innerText;
+    this.isOpened = false;
+  }
+
+  init(){
+    document.querySelector('.list').addEventListener('click', () => {
+      document.querySelector('.list__items').style.display = (this.isOpened ? 'none' : 'block');
+      this.isOpened = !this.isOpened;
+    });
+
+    document.querySelector('.list__items').addEventListener('click', (e) => {
+      const selectedCurrency = e.target.innerText;
+      e.target.innerText = this.currentCurrency;
+      this.currentCurrency = selectedCurrency;
+      document.querySelector('#currentCurrency').innerText = this.currentCurrency;
+    });
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Select);
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -762,6 +797,38 @@ module.exports = function (css) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style.scss */ "./style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Select_Select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Select/Select */ "./src/Select/Select.js");
+
+
+
+const getData = () => {
+  fetch('https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD')
+    .then(results => {
+      return results.json();
+    })
+    .then(data => showData(data));
+};
+
+const showData = (data) => {
+  //console.log(data);
+};
+
+getData();
+
+
+let s = new _Select_Select__WEBPACK_IMPORTED_MODULE_1__["default"]();
+s.init();
+
+
+
+
+
+
+
+
+
+
+
 
 
 /***/ }),

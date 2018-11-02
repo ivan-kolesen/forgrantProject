@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,500,700');
 
 $color-background: #1b232b;
 
@@ -74,10 +74,7 @@ header {
       background-color: transparent;
       border: 1px solid rgb(146, 232, 254);
       border-radius: 5px;
-      font-size: 16px;
-      color: rgb(255, 255, 255);
-      padding: 16px 1px 16px 14px;
-      font-weight: 300;
+      padding: 10px 0;
     }
 
     .list::after {
@@ -90,6 +87,24 @@ header {
       border-bottom: 1px solid rgb(146, 232, 254);
       border-right: 1px solid rgb(146, 232, 254);
       content: '';
+    }
+
+    .list__value{
+      font-size: 16px;
+      color: rgb(255, 255, 255);
+      font-weight: 100;
+      padding: 3px 16px;
+    }
+
+    .list__items {
+      display: none;
+      position: absolute;
+      top: 120%;
+      width: 100%;
+      background-color: $color-background;
+      border: 1px solid rgb(146, 232, 254);
+      border-radius: 5px;
+      padding: 10px 0;
     }
   }
 }
