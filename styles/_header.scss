@@ -1,0 +1,25 @@
+$color-header-background: rgba(253, 253, 253, 0.02);
+$color-header-border: rgba(148, 232, 254, 0.1);
+
+header {
+  display: flex;
+  width: 100%;
+  background-color: $color-header-background;
+  border: $color-header-border solid 1px;
+  border-radius: 10px;
+  margin: 70px 0 52px;
+  padding: 18px 0;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+  width: 66.6666%;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  width: 33.3333%;
+}
+

@@ -1,0 +1,40 @@
+$color-select-border: rgb(146, 232, 254);
+$color-background: #1b232b;
+
+.list {
+  position: relative;
+  width: 90%;
+  border: $color-select-border solid 1px;
+  border-radius: 5px;
+  margin-left: 2.5%;
+  padding: 10px 0;
+}
+
+.list::after {
+  position: absolute;
+  top: 21px;
+  right: 12px;
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  border-bottom: $color-select-border solid 1px;
+  border-right: $color-select-border solid 1px;
+  content: '';
+}
+
+.list__value {
+  font-size: 16px;
+  font-weight: 100;
+  padding: 3px 16px;
+}
+
+.list__items {
+  display: none;
+  position: absolute;
+  top: 120%;
+  width: 100%;
+  background-color: $color-background;
+  border: 1px solid $color-select-border;
+  border-radius: 5px;
+  padding: 10px 0;
+}

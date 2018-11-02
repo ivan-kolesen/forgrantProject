@@ -1,0 +1,38 @@
+$color-background-back-layer-on: #3eb3ef;
+$color-background-back-layer-off: #c4c4c4;
+$color-background-front-layer: #c9c9c9;
+$color-border-front-layer: #fff;
+
+.toggle-switcher {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-switcher_back-layer {
+  width: 35px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: $color-background-back-layer-on;
+  box-shadow: inset -2px 4px 15px -5px #000;
+}
+
+.toggle-switcher_back-layer_off {
+  background-color: $color-background-back-layer-off;
+}
+
+.toggle-switcher_front-layer {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: $color-background-front-layer;
+  border: 2px solid $color-border-front-layer;
+  border-radius: 50%;
+}
+
+.toggle-switcher_front-layer_off {
+  right: 0;
+  left: unset;
+}

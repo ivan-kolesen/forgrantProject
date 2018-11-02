@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,500,700');
+@import 'header';
+@import 'list';
+@import 'section';
+@import 'toggle';
+
+$color-background: #1b232b;
+$color-text: #fff;
+$image-background: "../img/background_pattern.png";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: $color-text;
+}
+
+body {
+  background: {
+    color: $color-background;
+    position: center top;
+    repeat: no-repeat;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.875;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.wrapper {
+  max-width: 984px;
+  background: {
+    color: $color-background;
+    image: url($image-background);
+    position: center top;
+    repeat: no-repeat;
+  }
+  margin: auto;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}

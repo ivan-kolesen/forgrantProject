@@ -1,0 +1,121 @@
+$color-text: #fff;
+$color-background-ethereum: #2d4934;
+$color-background-litecoin: #333333;
+$color-background-bitcoin: #301103;
+$color-header-background: rgba(253, 253, 253, 0.02);
+$color-header-border: rgba(148, 232, 254, 0.1);
+$color-select-border: rgb(146, 232, 254);
+$image-background: "../img/background_pattern.png";
+
+.etherium {
+  background-color: $color-background-ethereum;
+}
+
+.litecoin {
+  background-color: $color-background-litecoin;
+}
+
+.bitcoin {
+  background-color: $color-background-bitcoin;
+}
+
+section {
+  display: flex;
+  width: 308px;
+  background: radial-gradient(circle farthest-side at 60% 30%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.linear-grad {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(340deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0.2) 65%, rgba(255, 255, 255, 0));
+}
+
+.section__name {
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+  z-index: 1;
+}
+
+.section__img {
+  height: 118px;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: -57px;
+    left: 22px;
+  }
+}
+
+.section__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 30px;
+}
+
+.section__data_price {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section__data_toggle {
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .toggle-text {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.section__data__changes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 30px;
+}
+
+.section__data_change {
+  height: 23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .changes-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+  }
+
+  .changes-value {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .changes-value_positive {
+    color: greenyellow;
+  }
+
+  .changes-value_negative {
+    color: red;
+  }
+}
