@@ -23,10 +23,10 @@ section {
   display: flex;
   width: 308px;
   background: radial-gradient(
-    circle farthest-side at 60% 30%,
+    circle farthest-side at 52% 30%,
     rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.2) 20%,
-    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.25) 25%,
+    rgba(255, 255, 255, 0.1) 45%,
     rgba(255, 255, 255, 0) 100%
   );
   border-radius: 10px;
@@ -62,8 +62,21 @@ section {
 
   img {
     position: absolute;
-    top: -57px;
-    left: 22px;
+  }
+
+  .img-ethereum {
+    top: -81px;
+    left: 9px;
+  }
+
+  .img-litecoin {
+    top: -2px;
+    left: 93px;
+  }
+
+  .img-bitcoin {
+    top: -16px;
+    left: 62px;
   }
 }
 
@@ -119,10 +132,10 @@ section {
   }
 
   .changes-row__value_positive {
-    color: greenyellow;
+    color: #6cb942;
   }
 
   .changes-row__value_negative {
-    color: red;
+    color: #c80e24;
   }
 }

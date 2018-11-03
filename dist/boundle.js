@@ -151,7 +151,7 @@
         // module
         exports.push([
           module.i,
-          'header {\n  display: flex;\n  width: 100%;\n  background-color: rgba(253, 253, 253, 0.02);\n  border: rgba(148, 232, 254, 0.1) solid 1px;\n  border-radius: 10px;\n  margin: 70px 0 52px;\n  padding: 18px 0; }\n\n.header__headline {\n  display: flex;\n  justify-content: center;\n  width: 66.6666%; }\n\n.header__options {\n  display: flex;\n  align-items: center;\n  width: 33.3333%; }\n\n.list {\n  position: relative;\n  width: 90%;\n  border: #92e8fe solid 1px;\n  border-radius: 5px;\n  margin-left: 2.5%;\n  padding: 10px 0; }\n\n.list::after {\n  position: absolute;\n  top: 21px;\n  right: 12px;\n  width: 5px;\n  height: 5px;\n  transform: rotate(45deg);\n  border-bottom: #92e8fe solid 1px;\n  border-right: #92e8fe solid 1px;\n  content: ""; }\n\n.list__value {\n  font-size: 16px;\n  font-weight: 100;\n  padding: 3px 16px; }\n\n.list__items {\n  display: none;\n  position: absolute;\n  top: 120%;\n  width: 100%;\n  background-color: #1b232b;\n  border: 1px solid #92e8fe;\n  border-radius: 5px;\n  padding: 10px 0; }\n\n.etherium {\n  background-color: #2d4934; }\n\n.litecoin {\n  background-color: #333333; }\n\n.bitcoin {\n  background-color: #301103; }\n\nsection {\n  display: flex;\n  width: 308px;\n  background: radial-gradient(circle farthest-side at 60% 30%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 100%);\n  border-radius: 10px;\n  overflow: hidden; }\n\n.linear-grad {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(340deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0.2) 65%, rgba(255, 255, 255, 0)); }\n\n.section__name {\n  height: 58px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0 30px;\n  z-index: 1; }\n\n.section__img {\n  height: 118px;\n  position: relative; }\n  .section__img img {\n    position: absolute;\n    top: -57px;\n    left: 22px; }\n\n.section__price {\n  height: 50px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 30px; }\n\n.section__toggle {\n  height: 10px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 30px; }\n  .section__toggle .toggle-text {\n    font-size: 14px;\n    font-weight: 700; }\n\n.section__changes {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  margin: 10px 30px; }\n\n.changes-row {\n  height: 23px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  .changes-row .changes-row__name {\n    display: flex;\n    align-items: center;\n    font-size: 14px;\n    color: rgba(255, 255, 255, 0.2);\n    font-weight: 700; }\n  .changes-row .changes-row__value {\n    display: flex;\n    align-items: center;\n    font-size: 16px;\n    font-weight: 700; }\n  .changes-row .changes-row__value_positive {\n    color: greenyellow; }\n  .changes-row .changes-row__value_negative {\n    color: red; }\n\n.toggle-button {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.toggle-button__back-layer {\n  width: 35px;\n  height: 15px;\n  border-radius: 10px;\n  background-color: #3eb3ef;\n  box-shadow: inset -2px 4px 15px -5px #000; }\n\n.toggle-button__back-layer_off {\n  background-color: #c4c4c4; }\n\n.toggle-button__front-layer {\n  position: absolute;\n  left: 0;\n  width: 20px;\n  height: 20px;\n  background-color: #c9c9c9;\n  border: 2px solid #fff;\n  border-radius: 50%; }\n\n.toggle-button__front-layer_off {\n  right: 0;\n  left: unset; }\n\n* {\n  margin: 0;\n  padding: 0;\n  font-size: 0;\n  box-sizing: border-box;\n  font-family: "Roboto", sans-serif;\n  color: #fff; }\n\nbody {\n  background-color: #1b232b;\n  background-position: center top;\n  background-repeat: no-repeat; }\n\nh2 {\n  font-size: 32px;\n  line-height: 1.875;\n  font-weight: 500; }\n\nh3 {\n  font-size: 20px;\n  font-weight: 500;\n  letter-spacing: 1px; }\n\n.wrapper {\n  max-width: 984px;\n  background-color: #1b232b;\n  background-image: url(' +
+          'header {\n  display: flex;\n  width: 100%;\n  background-color: rgba(253, 253, 253, 0.02);\n  border: rgba(148, 232, 254, 0.1) solid 1px;\n  border-radius: 10px;\n  margin: 70px 0 52px;\n  padding: 18px 0; }\n\n.header__headline {\n  display: flex;\n  justify-content: center;\n  width: 66.6666%; }\n\n.header__options {\n  display: flex;\n  align-items: center;\n  width: 33.3333%; }\n\n.list {\n  position: relative;\n  width: 90%;\n  border: #92e8fe solid 1px;\n  border-radius: 5px;\n  margin-left: 2.5%;\n  padding: 10px 0; }\n\n.list::after {\n  position: absolute;\n  top: 21px;\n  right: 12px;\n  width: 5px;\n  height: 5px;\n  transform: rotate(45deg);\n  border-bottom: #92e8fe solid 1px;\n  border-right: #92e8fe solid 1px;\n  content: ""; }\n\n.list__value {\n  font-size: 16px;\n  font-weight: 100;\n  padding: 3px 16px; }\n\n.list__items {\n  display: none;\n  position: absolute;\n  top: 120%;\n  width: 100%;\n  background-color: #1b232b;\n  border: 1px solid #92e8fe;\n  border-radius: 5px;\n  padding: 10px 0;\n  z-index: 2; }\n\n.etherium {\n  background-color: #2d4934; }\n\n.litecoin {\n  background-color: #333333; }\n\n.bitcoin {\n  background-color: #301103; }\n\nsection {\n  display: flex;\n  width: 308px;\n  background: radial-gradient(circle farthest-side at 52% 30%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.25) 25%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0) 100%);\n  border-radius: 10px;\n  overflow: hidden; }\n\n.linear-grad {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(340deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0.2) 65%, rgba(255, 255, 255, 0)); }\n\n.section__name {\n  height: 58px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0 30px;\n  z-index: 1; }\n\n.section__img {\n  height: 118px;\n  position: relative; }\n  .section__img img {\n    position: absolute; }\n  .section__img .img-ethereum {\n    top: -81px;\n    left: 9px; }\n  .section__img .img-litecoin {\n    top: -2px;\n    left: 93px; }\n  .section__img .img-bitcoin {\n    top: -16px;\n    left: 62px; }\n\n.section__price {\n  height: 50px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 30px; }\n\n.section__toggle {\n  height: 10px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0 30px; }\n  .section__toggle .toggle-text {\n    font-size: 14px;\n    font-weight: 700; }\n\n.section__changes {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  margin: 10px 30px; }\n\n.changes-row {\n  height: 23px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  .changes-row .changes-row__name {\n    display: flex;\n    align-items: center;\n    font-size: 14px;\n    color: rgba(255, 255, 255, 0.2);\n    font-weight: 700; }\n  .changes-row .changes-row__value {\n    display: flex;\n    align-items: center;\n    font-size: 16px;\n    font-weight: 700; }\n  .changes-row .changes-row__value_positive {\n    color: #6cb942; }\n  .changes-row .changes-row__value_negative {\n    color: #c80e24; }\n\n.toggle-button {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.toggle-button__back-layer {\n  width: 35px;\n  height: 15px;\n  border-radius: 10px;\n  background-color: #3eb3ef;\n  box-shadow: inset -2px 4px 15px -5px #000; }\n\n.toggle-button__back-layer_off {\n  background-color: #c4c4c4; }\n\n.toggle-button__front-layer {\n  position: absolute;\n  left: 0;\n  width: 20px;\n  height: 20px;\n  background-color: #c9c9c9;\n  border: 2px solid #fff;\n  border-radius: 50%; }\n\n.toggle-button__front-layer_off {\n  right: 0;\n  left: unset; }\n\n* {\n  margin: 0;\n  padding: 0;\n  font-size: 0;\n  box-sizing: border-box;\n  font-family: "Roboto", sans-serif;\n  color: #fff; }\n\nbody {\n  background-color: #1b232b;\n  background-position: center top;\n  background-repeat: no-repeat; }\n\nh2 {\n  font-size: 32px;\n  line-height: 1.875;\n  font-weight: 500; }\n\nh3 {\n  font-size: 20px;\n  font-weight: 500;\n  letter-spacing: 1px; }\n\n.wrapper {\n  max-width: 984px;\n  background-color: #1b232b;\n  background-image: url(' +
             escape(
               __webpack_require__(
                 /*! ../img/background_pattern.png */ "./img/background_pattern.png"
@@ -843,18 +843,18 @@
         class Cryptocurrency {
           constructor(name) {
             this.currentCurrency;
+            this.currencySign = "$";
             this.name = name;
             this.toggle = "percent";
-            this.measure = "%";
             this.data = {};
           }
 
           setData(currentCurrency) {
             this.currentCurrency = currentCurrency;
             fetch(
-              `https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC${
-                this.currentCurrency
-              }`
+              `https://apiv2.bitcoinaverage.com/indices/global/ticker/${
+                this.name
+              }${this.currentCurrency}`
             )
               .then(results => {
                 return results.json();
@@ -865,49 +865,45 @@
               });
           }
 
-          setMeasure() {
-            if (this.toggle === "percent") {
-              this.measure = "%";
-            } else {
-              switch (this.currentCurrency) {
-                case "USD":
-                  this.measure = "$";
-                  break;
-                case "EUR":
-                  this.measure = "E";
-                  break;
-                case "RUB":
-                  this.measure = "P";
-                  break;
-                case "GBP":
-                  this.measure = "F";
-                  break;
-              }
-            }
-          }
-
           switchToggle() {
             this.toggle = this.toggle === "percent" ? "price" : "percent";
             this.render();
           }
 
           renderPrice() {
-            document.querySelector(
-              `#price${this.name}`
-            ).innerText = this.data.last;
+            switch (this.currentCurrency) {
+              case "USD":
+                this.currencySign = "$";
+                break;
+              case "EUR":
+                this.currencySign = "€";
+                break;
+              case "RUB":
+                this.currencySign = "₽";
+                break;
+              case "GBP":
+                this.currencySign = "£";
+                break;
+            }
+            document.querySelector(`#price${this.name}`).innerText = `${
+              this.currencySign
+            }${this.data.last.toFixed(2)}`;
           }
 
           renderTimeIntervalChange(interval) {
             const id = `#${interval}Change${this.name}`;
-            let timeIntervalChange = this.data.changes[this.toggle][interval];
+            const sign = this.toggle === "percent" ? "%" : this.currencySign;
+            let timeIntervalChange = this.data.changes[this.toggle][
+              interval
+            ].toFixed(2);
 
             if (timeIntervalChange >= 0) {
-              timeIntervalChange = `+${timeIntervalChange} ${this.measure}`;
+              timeIntervalChange = `+${timeIntervalChange} ${sign}`;
               document
                 .querySelector(id)
                 .classList.add("changes-row__value_positive");
             } else {
-              timeIntervalChange = `${timeIntervalChange} ${this.measure}`;
+              timeIntervalChange = `${timeIntervalChange} ${sign}`;
               document
                 .querySelector(id)
                 .classList.add("changes-row__value_negative");
@@ -919,7 +915,6 @@
           }
 
           render() {
-            this.setMeasure();
             this.renderPrice();
             this.renderTimeIntervalChange("hour");
             this.renderTimeIntervalChange("day");
@@ -987,21 +982,23 @@
                 this.render();
               });
 
-            document.querySelector("#toggle").addEventListener("click", () => {
-              document
-                .querySelector(".toggle-button__back-layer")
-                .classList.toggle("toggle-button__back-layer_off");
-              document
-                .querySelector(".toggle-button__front-layer")
-                .classList.toggle("toggle-button__front-layer_off");
-              this.ethereum.switchToggle();
-            });
+            document
+              .querySelector("#toggleETH")
+              .addEventListener("click", () => {
+                document
+                  .querySelector(".toggle-button__back-layer")
+                  .classList.toggle("toggle-button__back-layer_off");
+                document
+                  .querySelector(".toggle-button__front-layer")
+                  .classList.toggle("toggle-button__front-layer_off");
+                this.ethereum.switchToggle();
+              });
           }
 
           render() {
             this.ethereum.setData(this.currentCurrency);
-            //this.litecoin.render();
-            //this.bitcoin.render();
+            this.litecoin.setData(this.currentCurrency);
+            this.bitcoin.setData(this.currentCurrency);
           }
         }
 

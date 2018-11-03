@@ -1,16 +1,16 @@
 class Cryptocurrency {
   constructor(name) {
     this.currentCurrency;
+    this.currencySign = "$";
     this.name = name;
     this.toggle = "percent";
-    this.measure = "%";
     this.data = {};
   }
 
   setData(currentCurrency) {
     this.currentCurrency = currentCurrency;
     fetch(
-      `https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC${
+      `https://apiv2.bitcoinaverage.com/indices/global/ticker/${this.name}${
         this.currentCurrency
       }`
     )
@@ -23,45 +23,43 @@ class Cryptocurrency {
       });
   }
 
-  setMeasure() {
-    if (this.toggle === "percent") {
-      this.measure = "%";
-    } else {
-      switch (this.currentCurrency) {
-        case "USD":
-          this.measure = "$";
-          break;
-        case "EUR":
-          this.measure = "E";
-          break;
-        case "RUB":
-          this.measure = "P";
-          break;
-        case "GBP":
-          this.measure = "F";
-          break;
-      }
-    }
-  }
-
   switchToggle() {
     this.toggle = this.toggle === "percent" ? "price" : "percent";
     this.render();
   }
 
   renderPrice() {
-    document.querySelector(`#price${this.name}`).innerText = this.data.last;
+    switch (this.currentCurrency) {
+      case "USD":
+        this.currencySign = "$";
+        break;
+      case "EUR":
+        this.currencySign = "€";
+        break;
+      case "RUB":
+        this.currencySign = "₽";
+        break;
+      case "GBP":
+        this.currencySign = "£";
+        break;
+    }
+    document.querySelector(`#price${this.name}`).innerText = `${
+      this.currencySign
+    }${this.data.last.toFixed(2)}`;
   }
 
   renderTimeIntervalChange(interval) {
     const id = `#${interval}Change${this.name}`;
-    let timeIntervalChange = this.data.changes[this.toggle][interval];
+    const sign = this.toggle === "percent" ? "%" : this.currencySign;
+    let timeIntervalChange = this.data.changes[this.toggle][interval].toFixed(
+      2
+    );
 
     if (timeIntervalChange >= 0) {
-      timeIntervalChange = `+${timeIntervalChange} ${this.measure}`;
+      timeIntervalChange = `+${timeIntervalChange} ${sign}`;
       document.querySelector(id).classList.add("changes-row__value_positive");
     } else {
-      timeIntervalChange = `${timeIntervalChange} ${this.measure}`;
+      timeIntervalChange = `${timeIntervalChange} ${sign}`;
       document.querySelector(id).classList.add("changes-row__value_negative");
     }
 
@@ -71,7 +69,6 @@ class Cryptocurrency {
   }
 
   render() {
-    this.setMeasure();
     this.renderPrice();
     this.renderTimeIntervalChange("hour");
     this.renderTimeIntervalChange("day");

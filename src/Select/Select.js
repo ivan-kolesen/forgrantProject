@@ -29,7 +29,7 @@ class Select {
       this.render();
     });
 
-    document.querySelector("#toggle").addEventListener("click", () => {
+    document.querySelector("#toggleETH").addEventListener("click", () => {
       document
         .querySelector(".toggle-button__back-layer")
         .classList.toggle("toggle-button__back-layer_off");
@@ -42,8 +42,8 @@ class Select {
 
   render() {
     this.ethereum.setData(this.currentCurrency);
-    //this.litecoin.render();
-    //this.bitcoin.render();
+    this.litecoin.setData(this.currentCurrency);
+    this.bitcoin.setData(this.currentCurrency);
   }
 }
 

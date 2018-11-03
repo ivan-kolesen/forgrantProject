@@ -28,7 +28,7 @@
           <h3>Ethereum</h3>
         </div>
         <div class="section__img">
-          <img src="./img/ethereum.png">
+          <img class="img-ethereum" src="./img/ethereum.png">
         </div>
         <div class="section__price">
           <h3>Price:</h3>
@@ -36,7 +36,7 @@
         </div>
         <div class="section__toggle">
             <div class="toggle-text">Percent change</div>
-            <div id="toggle" class="toggle-button">
+            <div id="toggleETH" class="toggle-button">
               <div class="toggle-button__back-layer"></div>
               <div class="toggle-button__front-layer"></div>
             </div>
@@ -62,10 +62,82 @@
       </div>
     </section>
     <section class="litecoin">
-      <div class="linear-grad"></div>
+      <div class="linear-grad">
+        <div class="section__name">
+          <h3>Litecoin</h3>
+        </div>
+        <div class="section__img">
+          <img class="img-litecoin" src="./img/litecoin.png">
+        </div>
+        <div class="section__price">
+          <h3>Price:</h3>
+          <h3 id="priceLTC"></h3>
+        </div>
+        <div class="section__toggle">
+          <div class="toggle-text">Percent change</div>
+          <div id="toggleLTC" class="toggle-button">
+            <div class="toggle-button__back-layer"></div>
+            <div class="toggle-button__front-layer"></div>
+          </div>
+        </div>
+        <div class="section__changes">
+          <div class="changes-row">
+            <div class="changes-row__name">Hour change</div>
+            <div class="changes-row__value" id="hourChangeLTC"></div>
+          </div>
+          <div class="changes-row">
+            <div class="changes-row__name">Day change</div>
+            <div class="changes-row__value" id="dayChangeLTC"></div>
+          </div>
+          <div class="changes-row">
+            <div class="changes-row__name">Week change</div>
+            <div class="changes-row__value" id="weekChangeLTC"></div>
+          </div>
+          <div class="changes-row">
+            <div class="changes-row__name">Month change</div>
+            <div class="changes-row__value" id="monthChangeLTC"></div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="bitcoin">
-      <div class="linear-grad"></div>
+      <div class="linear-grad">
+        <div class="section__name">
+          <h3>Bitcoin</h3>
+        </div>
+        <div class="section__img">
+          <img class="img-bitcoin" src="./img/bitcoin.png">
+        </div>
+        <div class="section__price">
+          <h3>Price:</h3>
+          <h3 id="priceBTC"></h3>
+        </div>
+        <div class="section__toggle">
+          <div class="toggle-text">Percent change</div>
+          <div id="toggle" class="toggle-button">
+            <div class="toggle-button__back-layer"></div>
+            <div class="toggle-button__front-layer"></div>
+          </div>
+        </div>
+        <div class="section__changes">
+          <div class="changes-row">
+            <div class="changes-row__name">Hour change</div>
+            <div class="changes-row__value" id="hourChangeBTC"></div>
+          </div>
+          <div class="changes-row">
+            <div class="changes-row__name">Day change</div>
+            <div class="changes-row__value" id="dayChangeBTC"></div>
+          </div>
+          <div class="changes-row">
+            <div class="changes-row__name">Week change</div>
+            <div class="changes-row__value" id="weekChangeBTC"></div>
+          </div>
+          <div class="changes-row">
+            <div class="changes-row__name">Month change</div>
+            <div class="changes-row__value" id="monthChangeBTC"></div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </div>
