@@ -39,8 +39,9 @@ $color-background: #1b232b;
   z-index: 2;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 972px) {
   .list {
+    max-width: 300px;
     margin: auto;
   }
 

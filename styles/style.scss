@@ -25,6 +25,12 @@ body {
   }
 }
 
+h1 {
+  font-size: 60px;
+  position: absolute;
+  visibility: hidden;
+}
+
 h2 {
   font-size: 32px;
   font-weight: 500;
@@ -60,10 +66,18 @@ main {
   width: 100%;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 676px) {
   main {
-    width: 95%;
+    flex-direction: column;
     justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 677px) and (max-width: 972px) {
+  main {
+    justify-content: space-around;
+    max-width: 95%;
     margin-bottom: 50px;
   }
 }

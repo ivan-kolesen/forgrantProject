@@ -26,7 +26,24 @@ header {
   padding: 22px 0;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 676px) {
+  header {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 20px 0 0;
+  }
+
+  .header__headline {
+    width: 100%;
+  }
+
+  .header__options {
+    width: 100%;
+  }
+}
+
+@media (min-width: 677px) and (max-width: 972px) {
   header {
     justify-content: center;
     flex-wrap: wrap;
