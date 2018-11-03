@@ -6,8 +6,7 @@ $color-background: #1b232b;
   width: 90%;
   border: $color-select-border solid 1px;
   border-radius: 5px;
-  margin-left: 2.5%;
-  padding: 10px 0;
+  margin-right: 16px;
 }
 
 .list::after {
@@ -25,7 +24,7 @@ $color-background: #1b232b;
 .list__value {
   font-size: 16px;
   font-weight: 100;
-  padding: 3px 16px;
+  padding: 16px;
 }
 
 .list__items {
@@ -38,4 +37,14 @@ $color-background: #1b232b;
   border-radius: 5px;
   padding: 10px 0;
   z-index: 2;
+}
+
+@media (max-width: 576px) {
+  .list {
+    margin: auto;
+  }
+
+  .list__value {
+    padding: 16px;
+  }
 }

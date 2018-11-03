@@ -7,18 +7,38 @@ header {
   background-color: $color-header-background;
   border: $color-header-border solid 1px;
   border-radius: 10px;
-  margin: 70px 0 52px;
-  padding: 18px 0;
+  margin: 70px auto 0;
 }
 
 .header__headline {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 66.6666%;
+  padding: 22px 0;
 }
 
 .header__options {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 33.3333%;
+  padding: 22px 0;
+}
+
+@media (max-width: 576px) {
+  header {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 20px 0 0;
+  }
+
+  .header__headline {
+    width: 100%;
+  }
+
+  .header__options {
+    width: 100%;
+  }
 }

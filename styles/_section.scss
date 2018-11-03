@@ -5,6 +5,8 @@ $color-background-bitcoin: #301103;
 $color-header-background: rgba(253, 253, 253, 0.02);
 $color-header-border: rgba(148, 232, 254, 0.1);
 $color-select-border: rgb(146, 232, 254);
+$color-digit-difference-positive: #6cb942;
+$color-digit-difference-negative: #c80e24;
 $image-background: "../img/background_pattern.png";
 
 .etherium {
@@ -31,6 +33,7 @@ section {
   );
   border-radius: 10px;
   overflow: hidden;
+  margin: 52px auto 0;
 }
 
 .linear-grad {
@@ -63,21 +66,21 @@ section {
   img {
     position: absolute;
   }
+}
 
-  .img-ethereum {
-    top: -81px;
-    left: 9px;
-  }
+.img-ethereum {
+  top: -81px;
+  left: 9px;
+}
 
-  .img-litecoin {
-    top: -2px;
-    left: 93px;
-  }
+.img-litecoin {
+  top: -2px;
+  left: 93px;
+}
 
-  .img-bitcoin {
-    top: -16px;
-    left: 62px;
-  }
+.img-bitcoin {
+  top: -16px;
+  left: 62px;
 }
 
 .section__price {
@@ -96,11 +99,11 @@ section {
   justify-content: space-between;
   align-items: center;
   margin: 0 30px;
+}
 
-  .toggle-text {
-    font-size: 14px;
-    font-weight: 700;
-  }
+.toggle-text {
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .section__changes {
@@ -115,27 +118,33 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
 
-  .changes-row__name {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.2);
-    font-weight: 700;
-  }
+.changes-row__name {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+}
 
-  .changes-row__value {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 700;
-  }
+.changes-row__value {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
 
-  .changes-row__value_positive {
-    color: #6cb942;
-  }
+.changes-row__value_positive {
+  color: $color-digit-difference-positive;
+}
 
-  .changes-row__value_negative {
-    color: #c80e24;
+.changes-row__value_negative {
+  color: $color-digit-difference-negative;
+}
+
+@media (max-width: 576px) {
+  section {
+    margin: 40px auto 0;
   }
 }
