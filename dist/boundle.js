@@ -832,29 +832,122 @@
         /***/
       },
 
-    /***/ "./src/Cryptocurrency/Cryptocurrency.js":
-      /*!**********************************************!*\
-  !*** ./src/Cryptocurrency/Cryptocurrency.js ***!
-  \**********************************************/
+    /***/ "./src/App.js":
+      /*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony import */ var _Cryptocurrency__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! ./Cryptocurrency */ "./src/Cryptocurrency.js"
+        );
+
+        class App {
+          constructor() {
+            this.currentCurrency = document.querySelector(
+              "#currentCurrency"
+            ).innerText;
+            this.selectIsOpened = false;
+            this.ethereum = new _Cryptocurrency__WEBPACK_IMPORTED_MODULE_0__[
+              "default"
+            ]("ETH");
+            this.litecoin = new _Cryptocurrency__WEBPACK_IMPORTED_MODULE_0__[
+              "default"
+            ]("LTC");
+            this.bitcoin = new _Cryptocurrency__WEBPACK_IMPORTED_MODULE_0__[
+              "default"
+            ]("BTC");
+            this.handleSelect = this.handleSelect.bind(this);
+            this.handleOptions = this.handleOptions.bind(this);
+          }
+
+          handleSelect() {
+            const listStyle = this.selectIsOpened ? "none" : "block";
+            document.querySelector(".list__items").style.display = listStyle;
+            this.selectIsOpened = !this.selectIsOpened;
+          }
+
+          handleOptions(e) {
+            const selectedCurrency = e.target.innerText;
+            e.target.innerText = this.currentCurrency;
+            this.currentCurrency = selectedCurrency;
+            document.querySelector(
+              "#currentCurrency"
+            ).innerText = this.currentCurrency;
+            this.render();
+          }
+
+          init() {
+            document
+              .querySelector(".list")
+              .addEventListener("click", this.handleSelect);
+            document
+              .querySelector(".list__items")
+              .addEventListener("click", this.handleOptions);
+            this.ethereum.init();
+            this.litecoin.init();
+            this.bitcoin.init();
+            this.render();
+          }
+
+          render() {
+            this.ethereum.update(this.currentCurrency);
+            this.litecoin.update(this.currentCurrency);
+            this.bitcoin.update(this.currentCurrency);
+          }
+        }
+
+        /* harmony default export */ __webpack_exports__["default"] = App;
+
+        /***/
+      },
+
+    /***/ "./src/Cryptocurrency.js":
+      /*!*******************************!*\
+  !*** ./src/Cryptocurrency.js ***!
+  \*******************************/
       /*! exports provided: default */
       /***/ function(module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         class Cryptocurrency {
           constructor(name) {
-            this.currentCurrency;
+            this.currentCurrency = "USD";
             this.currencySign = "$";
             this.name = name;
             this.toggle = "percent";
             this.data = {};
+            this.handleToggle = this.handleToggle.bind(this);
           }
 
-          setData(currentCurrency) {
+          init() {
+            document
+              .querySelector(`#toggle${this.name}`)
+              .addEventListener("click", this.handleToggle);
+          }
+
+          handleToggle() {
+            document
+              .querySelector(`#buttonBack${this.name}`)
+              .classList.toggle("toggle-button__back-layer_off");
+            document
+              .querySelector(`#buttonFront${this.name}`)
+              .classList.toggle("toggle-button__front-layer_off");
+            this.toggle = this.toggle === "percent" ? "price" : "percent";
+            this.render();
+          }
+
+          update(currentCurrency) {
             this.currentCurrency = currentCurrency;
+            this.updateData();
+          }
+
+          updateData() {
+            const endOfLink = this.name + this.currentCurrency;
             fetch(
-              `https://apiv2.bitcoinaverage.com/indices/global/ticker/${
-                this.name
-              }${this.currentCurrency}`
+              `https://apiv2.bitcoinaverage.com/indices/global/ticker/${endOfLink}`
             )
               .then(results => {
                 return results.json();
@@ -863,11 +956,6 @@
                 this.data = data;
                 this.render();
               });
-          }
-
-          switchToggle() {
-            this.toggle = this.toggle === "percent" ? "price" : "percent";
-            this.render();
           }
 
           renderPrice() {
@@ -893,17 +981,15 @@
           renderTimeIntervalChange(interval) {
             const id = `#${interval}Change${this.name}`;
             const sign = this.toggle === "percent" ? "%" : this.currencySign;
-            let timeIntervalChange = this.data.changes[this.toggle][
-              interval
-            ].toFixed(2);
+            let timeIntervalChange = this.data.changes[this.toggle][interval];
 
             if (timeIntervalChange >= 0) {
-              timeIntervalChange = `+${timeIntervalChange} ${sign}`;
+              timeIntervalChange = `+${timeIntervalChange.toFixed(2)} ${sign}`;
               document
                 .querySelector(id)
                 .classList.add("changes-row__value_positive");
             } else {
-              timeIntervalChange = `${timeIntervalChange} ${sign}`;
+              timeIntervalChange = `${timeIntervalChange.toFixed(2)} ${sign}`;
               document
                 .querySelector(id)
                 .classList.add("changes-row__value_negative");
@@ -930,83 +1016,6 @@
         /***/
       },
 
-    /***/ "./src/Select/Select.js":
-      /*!******************************!*\
-  !*** ./src/Select/Select.js ***!
-  \******************************/
-      /*! exports provided: default */
-      /***/ function(module, __webpack_exports__, __webpack_require__) {
-        "use strict";
-        __webpack_require__.r(__webpack_exports__);
-        /* harmony import */ var _Cryptocurrency_Cryptocurrency__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-          /*! ../Cryptocurrency/Cryptocurrency */ "./src/Cryptocurrency/Cryptocurrency.js"
-        );
-
-        class Select {
-          constructor() {
-            this.currentCurrency = document.querySelector(
-              "#currentCurrency"
-            ).innerText;
-            this.isOpened = false;
-            this.ethereum = new _Cryptocurrency_Cryptocurrency__WEBPACK_IMPORTED_MODULE_0__[
-              "default"
-            ]("ETH");
-            this.litecoin = new _Cryptocurrency_Cryptocurrency__WEBPACK_IMPORTED_MODULE_0__[
-              "default"
-            ]("LTC");
-            this.bitcoin = new _Cryptocurrency_Cryptocurrency__WEBPACK_IMPORTED_MODULE_0__[
-              "default"
-            ]("BTC");
-          }
-
-          init() {
-            this.render();
-
-            document.querySelector(".list").addEventListener("click", () => {
-              document.querySelector(".list__items").style.display = this
-                .isOpened
-                ? "none"
-                : "block";
-              this.isOpened = !this.isOpened;
-            });
-
-            document
-              .querySelector(".list__items")
-              .addEventListener("click", e => {
-                const selectedCurrency = e.target.innerText;
-                e.target.innerText = this.currentCurrency;
-                this.currentCurrency = selectedCurrency;
-                document.querySelector(
-                  "#currentCurrency"
-                ).innerText = this.currentCurrency;
-                this.render();
-              });
-
-            document
-              .querySelector("#toggleETH")
-              .addEventListener("click", () => {
-                document
-                  .querySelector(".toggle-button__back-layer")
-                  .classList.toggle("toggle-button__back-layer_off");
-                document
-                  .querySelector(".toggle-button__front-layer")
-                  .classList.toggle("toggle-button__front-layer_off");
-                this.ethereum.switchToggle();
-              });
-          }
-
-          render() {
-            this.ethereum.setData(this.currentCurrency);
-            this.litecoin.setData(this.currentCurrency);
-            this.bitcoin.setData(this.currentCurrency);
-          }
-        }
-
-        /* harmony default export */ __webpack_exports__["default"] = Select;
-
-        /***/
-      },
-
     /***/ "./src/index.js":
       /*!**********************!*\
   !*** ./src/index.js ***!
@@ -1021,12 +1030,12 @@
         /* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/ __webpack_require__.n(
           _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__
         );
-        /* harmony import */ var _Select_Select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-          /*! ./Select/Select */ "./src/Select/Select.js"
+        /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! ./App */ "./src/App.js"
         );
 
-        let s = new _Select_Select__WEBPACK_IMPORTED_MODULE_1__["default"]();
-        s.init();
+        let page = new _App__WEBPACK_IMPORTED_MODULE_1__["default"]();
+        page.init();
 
         /***/
       },

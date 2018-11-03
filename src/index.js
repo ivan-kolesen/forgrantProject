@@ -1,5 +1,5 @@
 import scss from "../styles/style.scss";
-import Select from "./Select/Select";
+import App from "./App";
 
-let s = new Select();
-s.init();
+let page = new App();
+page.init();
