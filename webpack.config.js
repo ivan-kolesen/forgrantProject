@@ -1,10 +1,14 @@
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
+
   output: {
     filename: "boundle.js"
   },
+
   module: {
     rules: [
       {
@@ -27,14 +31,27 @@ module.exports = {
       }
     ]
   },
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: "style.css"
     })
   ],
+
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        sourceMap: false
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  },
+
   watch: true,
+
   watchOptions: {
     aggregateTimeout: 100
   },
+
   devtool: "source-map"
 };
