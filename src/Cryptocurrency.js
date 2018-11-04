@@ -41,7 +41,7 @@ class Cryptocurrency {
         this.render();
       })
       .catch(() => {
-        alert("Something went wrong!");
+        console.log("Something went wrong!");
       });
   }
 
