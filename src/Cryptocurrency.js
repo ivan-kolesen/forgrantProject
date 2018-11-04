@@ -39,6 +39,9 @@ class Cryptocurrency {
       .then(data => {
         this.data = data;
         this.render();
+      })
+      .catch(() => {
+        alert("Something went wrong!");
       });
   }
 
