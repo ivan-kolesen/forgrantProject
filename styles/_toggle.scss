@@ -2,6 +2,7 @@ $color-background-back-layer-on: #3eb3ef;
 $color-background-back-layer-off: #c4c4c4;
 $color-background-front-layer: #c9c9c9;
 $color-border-front-layer: #fff;
+$color-box-shadow: #000;
 
 .toggle-button {
   position: relative;
@@ -16,7 +17,7 @@ $color-border-front-layer: #fff;
   height: 15px;
   border-radius: 10px;
   background-color: $color-background-back-layer-on;
-  box-shadow: inset -2px 4px 15px -5px #000;
+  box-shadow: inset -2px 4px 15px -5px $color-box-shadow;
 }
 
 .toggle-button__back-layer_off {
@@ -28,8 +29,7 @@ $color-border-front-layer: #fff;
   left: 0;
   width: 20px;
   height: 20px;
-  background-image: linear-gradient(
-    90deg,
+  background-image: conic-gradient(
     rgb(232, 232, 232) 0%,
     rgb(177, 177, 177) 6%,
     rgb(121, 121, 121) 13%,

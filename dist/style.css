@@ -23,22 +23,7 @@ header {
   padding: 22px 0;
 }
 
-@media (max-width: 676px) {
-  header {
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 95%;
-    margin: 20px 0 0;
-  }
-  .header__headline {
-    width: 100%;
-  }
-  .header__options {
-    width: 100%;
-  }
-}
-
-@media (min-width: 677px) and (max-width: 972px) {
+@media (max-width: 972px) {
   header {
     justify-content: center;
     flex-wrap: wrap;
@@ -266,8 +251,7 @@ section {
   left: 0;
   width: 20px;
   height: 20px;
-  background-image: linear-gradient(
-    90deg,
+  background-image: conic-gradient(
     #e8e8e8 0%,
     #b1b1b1 6%,
     #797979 13%,
